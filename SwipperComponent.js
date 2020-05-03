@@ -48,42 +48,42 @@ export default class SwiperComponent extends React.Component{
                 <View style={styles.silde}>
                     <View style={styles.header}>
                         <Image 
-                            source={require('./asset/asset1.png')}
+                            source={require('./assets/asset1.png')}
                             style={styles.image}
                             resizeMode={'stretch'}
                         />
                     </View>
                     <View style={styles.footer}>
                         <Text style={styles.title}>Hoşgeldiniz!</Text>
-                        <Text style={styles.text}>Uncomment the realm import and related realm statements then it's running fine</Text>
+                        <Text style={styles.text}>Benzersiz içeriklerin yer aldığı uygulamamızı sizlere sunuyoruz</Text>
                     </View>
                 </View>
 
                 <View style={styles.silde}>
                     <View style={styles.header}>
                         <Image 
-                            source={require('./asset/asset2.png')}
+                            source={require('./assets/asset2.png')}
                             style={styles.image}
                             resizeMode={'stretch'}
                         />
                     </View>
                     <View style={styles.footer}>
                         <Text style={styles.title}>Kayıt Ol veya Giriş Yap</Text>
-                        <Text style={styles.text}>Uncomment the realm import and related realm statements then it's running fine</Text>
+                        <Text style={styles.text}>Ücretsiz kayıt ol ve kolayca giriş yap</Text>
                     </View>
                 </View>
 
                 <View style={styles.silde}>
                     <View style={styles.header}>
                         <Image 
-                            source={require('./asset/asset3.png')}
+                            source={require('./assets/asset2.png')}
                             style={styles.image}
                             resizeMode={'stretch'}
                         />
                     </View>
                     <View style={styles.footer}>
                         <Text style={styles.title}>Kullanmaya Başla!</Text>
-                        <Text style={styles.text}>Uncomment the realm import and related realm statements then it's running fine</Text>
+                        <Text style={styles.text}>Kolay kullanım arayüzü ve benzersiz içeriklere ulaşmanın kolay yolu</Text>
                         { this.state.show ? 
                             <View style={{flexDirection: 'row'}}>
                                 <Animatable.View
@@ -92,7 +92,7 @@ export default class SwiperComponent extends React.Component{
                                 duration={1500}
                                 useNativeDriver>
                                     <TouchableOpacity 
-                                    onPress={() => this.props.navigation.navigate('LoginScreen')}
+                                    onPress={() => this.props.navigation.navigate('SignScreen')}
                                     style={[styles.button, {
                                         borderColor: '#3465d9',
                                         borderWidth: 1,
@@ -108,7 +108,9 @@ export default class SwiperComponent extends React.Component{
                                 delay={0}
                                 duration={1500}
                                 useNativeDriver>
-                                    <TouchableOpacity style={[styles.button, {
+                                    <TouchableOpacity 
+                                    onPress={() => this.props.navigation.navigate('LoginScreen')}
+                                    style={[styles.button, {
                                         backgroundColor: '#3465d9',
                                         borderWidth: 1,
                                         borderRadius: 50,
